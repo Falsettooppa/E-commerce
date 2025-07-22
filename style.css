@@ -318,3 +318,36 @@ main {
     color: #ff7d1a;
     font-size: 1.5rem;
 }
+.fade-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.fade-section {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: none;
+}
+
+.fade-section.show {
+    display: flex; 
+    opacity: 1;
+}
+
+#about-section.show,
+#contact-section.show {
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
+#collections-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+}
