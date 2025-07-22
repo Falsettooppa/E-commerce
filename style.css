@@ -1,4 +1,4 @@
-/* Reset and Base */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -32,7 +32,7 @@ button:hover {
     color: #ff7d1a;
 }
 
-/* Header */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -80,7 +80,7 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-/* Main Layout */
+
 main {
     display: flex;
     flex-wrap: wrap;
@@ -232,7 +232,7 @@ main {
     background: #e66b00;
 }
 
-/* Cart */
+
 #cart {
     background: #fff;
     padding: 1rem 1.5rem;
@@ -261,7 +261,7 @@ main {
     border-bottom: none;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
     .product-block {
         flex-direction: column;
