@@ -1,4 +1,4 @@
-// Product Data
+
 var productsData = {
     1: { name: 'Fall Limited Edition Sneakers', price: 125 },
     2: { name: 'Spring Limited Edition Sneakers', price: 140 }
@@ -48,7 +48,7 @@ function saveAndRefresh() {
 
 updateCart();
 
-// Quantity controls
+
 var quantities = {};
 var increaseBtns = document.getElementsByClassName('increase');
 var decreaseBtns = document.getElementsByClassName('decrease');
@@ -127,20 +127,54 @@ function showProducts(category) {
     }
 }
 
+
 for (var i = 0; i < navLinks.length; i++) {
     navLinks[i].addEventListener('click', function (e) {
         e.preventDefault();
         var text = this.textContent.toLowerCase();
         if (text === 'collections') {
-            showProducts('all');
+            showProductsSection('all');
         } else if (text === 'men') {
-            showProducts('men');
+            showProductsSection('men');
         } else if (text === 'women') {
-            showProducts('women');
+            showProductsSection('women');
+        } else if (text === 'about') {
+            hideAllSections();
+            aboutSection.style.display = 'block';
+        } else if (text === 'contact') {
+            hideAllSections();
+            contactSection.style.display = 'block';
         } else {
             alert('This section is under development.');
         }
     });
 }
-// Initial display of all products
-showProducts('all');    
+
+
+var aboutSection = document.getElementById('about-section');
+var contactSection = document.getElementById('contact-section');
+
+function hideAllSections() {
+    var i;
+    for (i = 0; i < productBlocks.length; i++) {
+        productBlocks[i].style.display = 'none';
+    }
+    document.getElementById('cart').style.display = 'none';
+    aboutSection.style.display = 'none';
+    contactSection.style.display = 'none';
+}
+
+function showProductsSection(category) {
+    hideAllSections();
+    document.getElementById('cart').style.display = 'block';
+    for (var i = 0; i < productBlocks.length; i++) {
+        var cat = productBlocks[i].getAttribute('data-category');
+        if (category === 'all' || cat === category) {
+            productBlocks[i].style.display = 'flex';
+        }
+    }
+}
+
+
+
+showProductsSection('all');

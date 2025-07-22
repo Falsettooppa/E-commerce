@@ -303,3 +303,18 @@ main {
         align-items: center;
     }
 }
+#about-section, #contact-section {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+#about-section h2, #contact-section h2 {
+    margin-bottom: 1rem;
+    color: #ff7d1a;
+    font-size: 1.5rem;
+}
