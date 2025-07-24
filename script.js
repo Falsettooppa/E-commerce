@@ -185,6 +185,22 @@ for (var i = 0; i < navLinks.length; i++) {
         showSection(section); // show the section
     });
 }
+// Toggle cart visibility when cart icon is clicked
+var cartIcon = document.getElementById('cart-icon');
+
+cartIcon.addEventListener('click', function () {
+    if (cartSection.style.display === 'block') {
+        cartSection.style.display = 'none';
+    } else {
+        hideAllSections(); // hide other sections if needed
+        cartSection.style.display = 'block';
+    }
+});
+// Show collections section by default when page loads
+function init() {
+    hideAllSections(); // hide all sections initially
+    showSection('collections'); // show collections section
+}
 
 /* Default view when page loads */
 showSection('collections');
