@@ -1,22 +1,25 @@
-
+/* Reset default spacing and ensure padding/border do not break layouts */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* General body styles */
 body {
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Helvetica Neue', sans-serif; /* clean modern font */
+    background-color: #f8f8f8; /* light background */
+    color: #333; /* dark text */
+    line-height: 1.6; /* readable line spacing */
 }
 
+/* Remove underline from links, inherit color */
 a {
     text-decoration: none;
     color: inherit;
 }
 
+/* Basic button styling */
 button {
     cursor: pointer;
     border: none;
@@ -27,12 +30,13 @@ button {
     transition: background 0.2s, color 0.2s;
 }
 
+/* Button hover effect */
 button:hover {
     background: #ffede0;
     color: #ff7d1a;
 }
 
-
+/* Header styling: logo, nav, and cart */
 header {
     display: flex;
     justify-content: space-between;
@@ -45,11 +49,13 @@ header {
     z-index: 10;
 }
 
+/* Logo styling */
 .logo {
     font-weight: bold;
     font-size: 1.2rem;
 }
 
+/* Navigation styling */
 nav ul {
     display: flex;
     gap: 1.2rem;
@@ -66,12 +72,14 @@ nav ul li a:hover {
     color: #000;
 }
 
+/* Icons section (cart and user photo) */
 .icons {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
+/* User profile image styling */
 .user-icon {
     width: 35px;
     height: 35px;
@@ -80,7 +88,7 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-
+/* Main area styling where products show */
 main {
     display: flex;
     flex-wrap: wrap;
@@ -92,6 +100,7 @@ main {
     background: #fff;
 }
 
+/* Product block container */
 .product-block {
     display: flex;
     flex-direction: row;
@@ -106,12 +115,14 @@ main {
     justify-content: center;
 }
 
+/* Gallery section for product images */
 .gallery-section {
     max-width: 350px;
     width: 100%;
     text-align: center;
 }
 
+/* Main product image styling */
 .main-img {
     width: 100%;
     border-radius: 10px;
@@ -123,6 +134,7 @@ main {
     transform: scale(1.02);
 }
 
+/* Thumbnail images under product */
 .thumbnails {
     display: flex;
     justify-content: center;
@@ -141,12 +153,14 @@ main {
     transition: border 0.2s, transform 0.2s;
 }
 
+/* Highlight active thumbnail */
 .thumbnail:hover,
 .thumbnail.active-thumb {
     border: 2px solid #ff7d1a;
     transform: scale(1.05);
 }
 
+/* Product details section beside image */
 .product-info {
     flex: 1;
     min-width: 250px;
@@ -171,6 +185,7 @@ main {
     color: #555;
 }
 
+/* Price display section */
 .price-section {
     display: flex;
     align-items: center;
@@ -196,6 +211,7 @@ main {
     font-size: 0.9rem;
 }
 
+/* Quantity and cart button styling */
 .quantity-cart {
     display: flex;
     align-items: center;
@@ -232,7 +248,7 @@ main {
     background: #e66b00;
 }
 
-
+/* Cart styling */
 #cart {
     background: #fff;
     padding: 1rem 1.5rem;
@@ -261,7 +277,7 @@ main {
     border-bottom: none;
 }
 
-
+/* Responsive styling for tablets */
 @media (max-width: 768px) {
     .product-block {
         flex-direction: column;
@@ -276,6 +292,8 @@ main {
         padding: 1rem;
     }
 }
+
+/* Responsive styling for mobile phones */
 @media (max-width: 480px) {
     header {
         flex-direction: column;
@@ -303,6 +321,8 @@ main {
         align-items: center;
     }
 }
+
+/* About and Contact section styling */
 #about-section, #contact-section {
     max-width: 800px;
     margin: auto;
@@ -318,13 +338,8 @@ main {
     color: #ff7d1a;
     font-size: 1.5rem;
 }
-.fade-section {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
+
+/* Fade-in effect for sections when displayed */
 .fade-section {
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -332,22 +347,31 @@ main {
 }
 
 .fade-section.show {
-    display: flex; 
+    display: flex;
     opacity: 1;
 }
 
+/* Show for About/Contact when active */
 #about-section.show,
 #contact-section.show {
     display: block;
 }
 
+/* Utility class to hide elements */
 .hidden {
     display: none !important;
 }
+
+/* Styling for collections section */
 #collections-section {
     max-width: 1200px;
     margin: auto;
     padding: 2rem;
     background: #fff;
     border-radius: 10px;
+}
+#collections-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #ff7d1a;
 }
