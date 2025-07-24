@@ -201,6 +201,17 @@ function init() {
     hideAllSections(); // hide all sections initially
     showSection('collections'); // show collections section
 }
+var checkoutBtn = document.getElementById('checkout-btn');
+
+checkoutBtn.addEventListener('click', function () {
+    if (cartData.length === 0) {
+        alert("Your cart is empty. Please add items before checking out.");
+    } else {
+        alert("Proceeding to checkout...");
+        // Here you can later redirect to a payment page or checkout process
+    }
+});
+
 
 /* Default view when page loads */
 showSection('collections');
