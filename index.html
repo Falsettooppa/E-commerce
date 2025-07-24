@@ -7,17 +7,23 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+    <!-- This is the top part of the page with logo, navigation links, and cart icon -->
     <header>
         <div class="logo">Olegit Sneakers</div>
+
+        <!-- Navigation bar to move around the site -->
         <nav>
             <ul>
-                <li><a href="#" id="collections-link">Collections</a></li>
-                <li><a href="#" id="men-link">Men</a></li>
-                <li><a href="#" id="women-link">Women</a></li>
-                <li><a href="#" id="about-link">About</a></li>
-                <li><a href="#" id="contact-link">Contact</a></li>
+                <li><a href="#" id="collections-link">Collections</a></li> <!-- shows all products -->
+                <li><a href="#" id="men-link">Men</a></li> <!-- shows men sneakers -->
+                <li><a href="#" id="women-link">Women</a></li> <!-- shows women sneakers -->
+                <li><a href="#" id="about-link">About</a></li> <!-- about us section -->
+                <li><a href="#" id="contact-link">Contact</a></li> <!-- contact section -->
             </ul>
         </nav>
+
+        <!-- Cart icon with count and user image -->
         <div class="icons">
             <div id="cart-icon">🛒 (<span id="cart-count">0</span>)</div>
             <img src="Images/My Photo.jpg" alt="User" class="user-icon" />
@@ -25,9 +31,14 @@
     </header>
 
     <main>
+
+        <!-- Product block for men's sneakers -->
         <div class="product-block" data-category="men">
             <div class="gallery-section">
+                <!-- Main image of the product -->
                 <img id="main-image-1" src="Images/Men1.jpg" alt="Product 1" class="main-img" />
+
+                <!-- Small images to switch the main image -->
                 <div class="thumbnails" id="thumbnails-1">
                     <img src="Images/men2.jpg" alt="Thumb 1" class="thumbnail" />
                     <img src="Images/men3.jpg" alt="Thumb 2" class="thumbnail" />
@@ -35,30 +46,38 @@
                     <img src="Images/men1.jpg" alt="Thumb 4" class="thumbnail" />
                 </div>
             </div>
+
             <div class="product-info">
                 <h5>SNEAKER COMPANY</h5>
                 <h1>Fall Limited Edition Sneakers</h1>
                 <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                
+                <!-- Price area showing current price, discount, and old price -->
                 <div class="price-section">
                     <span class="current-price">$125.00</span>
                     <span class="discount">50%</span>
                     <span class="old-price">$250.00</span>
                 </div>
+
+                <!-- Quantity controls and add to cart button -->
                 <div class="quantity-cart">
                     <div class="quantity-control">
-                        <button class="decrease" data-product="1">-</button>
-                        <span class="quantity" data-product="1">0</span>
-                        <button class="increase" data-product="1">+</button>
+                        <button class="decrease" data-product="1">-</button> <!-- decrease quantity -->
+                        <span class="quantity" data-product="1">0</span> <!-- current quantity -->
+                        <button class="increase" data-product="1">+</button> <!-- increase quantity -->
                     </div>
-                    <button class="add-to-cart" data-product="1">Add to cart</button>
+                    <button class="add-to-cart" data-product="1">Add to cart</button> <!-- add to cart -->
                 </div>
             </div>
         </div>
 
-    
+        <!-- Product block for women's sneakers -->
         <div class="product-block" data-category="women">
             <div class="gallery-section">
+                <!-- Main image for women sneakers -->
                 <img id="main-image-2" src="Images/Women1.jpg" alt="Product 2" class="main-img" />
+
+                <!-- Thumbnails for the women product -->
                 <div class="thumbnails" id="thumbnails-2">
                     <img src="Images/women2.jpg" alt="Thumb 1" class="thumbnail" />
                     <img src="Images/women3.jpg" alt="Thumb 2" class="thumbnail" />
@@ -66,15 +85,20 @@
                     <img src="Images/women1.jpg" alt="Thumb 4" class="thumbnail" />
                 </div>
             </div>
+
             <div class="product-info">
                 <h5>SNEAKER COMPANY</h5>
                 <h1>Spring Limited Edition Sneakers</h1>
                 <p>Experience unparalleled comfort with these lightweight spring sneakers, perfect for casual days and active adventures alike.</p>
+                
+                <!-- Price section -->
                 <div class="price-section">
                     <span class="current-price">$140.00</span>
                     <span class="discount">30%</span>
                     <span class="old-price">$200.00</span>
                 </div>
+
+                <!-- Quantity controls for women sneakers -->
                 <div class="quantity-cart">
                     <div class="quantity-control">
                         <button class="decrease" data-product="2">-</button>
@@ -86,19 +110,19 @@
             </div>
         </div>
 
-       
+        <!-- This is where the cart items will be displayed -->
         <div id="cart">
             <h2>Your Cart</h2>
-            <ul id="cart-items"></ul>
+            <ul id="cart-items"></ul> <!-- list of items user added to cart -->
         </div>
 
-       
+        <!-- About us section (hidden initially) -->
         <section id="about-section" style="display: none; padding: 2rem;">
             <h2>About Us</h2>
             <p>Welcome to Olegit Sneaker Store! We are committed to providing high-quality, stylish sneakers that combine comfort and durability for your everyday adventures. Our goal is to ensure every step you take is in confidence and comfort, with carefully curated selections for both men and women.</p>
         </section>
 
-       
+        <!-- Contact section (hidden initially) -->
         <section id="contact-section" style="display: none; padding: 2rem;">
             <h2>Contact Us</h2>
             <p>Email: <a href="mailto:olegitng@gmail.com">olegitng@gmail.com</a></p>
@@ -107,10 +131,14 @@
         </section>
     </main>
 
-   <footer> <center>
-        <p>&copy; 2025 Olegit Sneaker Store. All rights reserved.</p>
-    </center></footer>
+    <!-- Footer of the website -->
+    <footer>
+        <center>
+            <p>&copy; 2025 Olegit Sneaker Store. All rights reserved.</p>
+        </center>
+    </footer>
 
+    <!-- Link to the JavaScript file that controls interactivity -->
     <script src="script.js"></script>
 </body>
 </html>
