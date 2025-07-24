@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Checkout - Olegit Sneaker Shop</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">Olegit Sneakers</div>
+    </header>
+
+    <main>
+        <section id="checkout-section">
+            <h2>Checkout Summary</h2>
+            <ul id="checkout-items"></ul>
+            <h3 id="checkout-total"></h3>
+            <button id="pay-now-btn">Pay Now</button>
+        </section>
+    </main>
+
+    <script>
+        // Get cart data from localStorage
+        var cartData = JSON.parse(localStorage.getItem('cartData')) || [];
+        var checkoutItems = document.getElementById('checkout-items');
+        var checkoutTotal = document.getElementById('checkout-total');
+
+        var totalAmount = 0;
+        if (cartData.length === 0) {
+            var li = document.createElement('li');
+            li.textContent = "Your cart is empty.";
+            checkoutItems.appendChild(li);
+        } else {
+            cartData.forEach(item => {
+                var li = document.createElement('li');
+                li.textContent = `${item.name} - $${item.price} x ${item.quantity}`;
+                checkoutItems.appendChild(li);
+                totalAmount += item.price * item.quantity;
+            });
+            checkoutTotal.textContent = "Total: $" + totalAmount.toFixed(2);
+        }
+
+        document.getElementById('pay-now-btn').addEventListener('click', function () {
+            alert("Thank you for your purchase! Payment simulation complete.");
+            localStorage.removeItem('cartData');
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>

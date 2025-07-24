@@ -207,10 +207,11 @@ checkoutBtn.addEventListener('click', function () {
     if (cartData.length === 0) {
         alert("Your cart is empty. Please add items before checking out.");
     } else {
-        alert("Proceeding to checkout...");
-        // Here you can later redirect to a payment page or checkout process
+        // Redirect to checkout page
+        window.location.href = "checkout.html";
     }
 });
+
 
 
 /* Default view when page loads */
